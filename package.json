@@ -1,0 +1,8 @@
+{
+  "name": "decor",
+  "private": true,
+  "author": "Evan Fleet",
+  "workspaces": [
+    "packages/*"
+  ]
+}
