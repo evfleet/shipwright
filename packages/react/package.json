@@ -1,0 +1,35 @@
+{
+  "name": "@decor-ui/react",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Evan Fleet",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/decor.es.js",
+      "require": "./dist/decor.cjs.js"
+    }
+  },
+  "main": "./dist/decor.cjs.js",
+  "module": "./dist/decor.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2",
+    "vite-plugin-dts": "^2.3.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
