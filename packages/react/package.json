@@ -21,7 +21,7 @@
     "build": "tsc && vite build",
     "dev": "vite",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "vitest"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.18",
@@ -41,7 +41,8 @@
     "storybook": "^7.0.18",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
-    "vite-plugin-dts": "^2.3.0"
+    "vite-plugin-dts": "^2.3.0",
+    "vitest": "^0.31.1"
   },
   "peerDependencies": {
     "react": "^18.2.0"
