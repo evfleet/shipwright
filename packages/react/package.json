@@ -6,6 +6,7 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/decor.es.js",
       "require": "./dist/decor.cjs.js"
     }
