@@ -20,8 +20,12 @@
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 --no-open",
     "test": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.6.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.18",
@@ -53,8 +57,5 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  },
-  "dependencies": {
-    "@radix-ui/react-slot": "^1.0.2"
   }
 }
