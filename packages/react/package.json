@@ -19,10 +19,14 @@
   "scripts": {
     "build": "npm run build:components && npm run build:styles",
     "build:components": "tsc && vite build",
-    "build:styles": "tailwindcss -i ./src/index.css -o ./dist/styles.css",
     "build:storybook": "storybook build",
+    "build:styles": "tailwindcss -i ./src/index.css -o ./dist/styles.css",
     "storybook": "storybook dev -p 6006",
     "test": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.3.2",
