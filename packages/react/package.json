@@ -17,7 +17,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "npm run build:components && npm run build:styles",
+    "build:components": "tsc && vite build",
+    "build:styles": "tailwindcss -i ./src/index.css -o ./dist/styles.css",
     "build:storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
     "test": "vitest"
