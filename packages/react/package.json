@@ -20,7 +20,7 @@
     "build": "npm run build:components && npm run build:styles",
     "build:components": "tsc && vite build",
     "build:storybook": "storybook build",
-    "build:styles": "tailwindcss -i ./src/index.css -o ./dist/styles.css",
+    "build:styles": "tailwindcss -i ./src/index.css -o ./dist/style.css",
     "storybook": "storybook dev -p 6006 --no-open",
     "test": "vitest"
   },
