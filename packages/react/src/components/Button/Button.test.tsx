@@ -5,15 +5,13 @@ import Button from "./Button";
 
 describe("Button", () => {
   it("should render successfully", () => {
-    const { baseElement } = render(<Button />);
-
-    expect(baseElement).toBeTruthy();
+    const wrapper = render(<Button />);
+    expect(wrapper).toBeTruthy();
   });
 
   it("should have no accessibility issues", async () => {
-    const { container } = render(<Button />);
-    const results = await axe(container);
-
+    const wrapper = render(<Button />);
+    const results = await axe(wrapper.container);
     expect(results).toHaveNoViolations();
   });
 });
