@@ -3,9 +3,6 @@
   "private": true,
   "license": "MIT",
   "author": "Evan Fleet",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "prettier": "^3.0.2",
     "prettier-plugin-tailwindcss": "^0.5.3"
