@@ -102,6 +102,9 @@ importers:
       jsdom:
         specifier: ^23.0.1
         version: 23.0.1
+      lucide-react:
+        specifier: ^0.294.0
+        version: 0.294.0(react@18.2.0)
       postcss:
         specifier: ^8.4.32
         version: 8.4.32
@@ -7069,6 +7072,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: true
+
+  /lucide-react@0.294.0(react@18.2.0):
+    resolution: {integrity: sha512-V7o0/VECSGbLHn3/1O67FUgBwWB+hmzshrgDVRJQhMh8uj5D3HBuIvhuAmQTtlupILSplwIZg5FTc4tTKMA2SA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: true
 
   /lz-string@1.5.0:

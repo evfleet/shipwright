@@ -56,6 +56,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "jest-axe": "^8.0.0",
     "jsdom": "^23.0.1",
+    "lucide-react": "^0.294.0",
     "postcss": "^8.4.32",
     "prettier-plugin-tailwindcss": "^0.5.9",
     "react": "^18.2.0",
