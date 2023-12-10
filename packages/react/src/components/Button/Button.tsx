@@ -2,7 +2,6 @@ import {
   ButtonHTMLAttributes,
   ReactElement,
   ReactNode,
-  cloneElement,
   forwardRef,
 } from "react";
 import { Slot } from "@radix-ui/react-slot";
@@ -100,9 +99,6 @@ const buttonVariants = cva(
   },
 );
 
-const styleIcons = (icon?: ReactElement) =>
-  icon ? cloneElement(icon, { className: "h-4 w-4" }) : null;
-
 const Loading = ({ loadingIcon }: { loadingIcon?: ReactElement }) => {
   return loadingIcon || "Loading";
 };
@@ -117,9 +113,9 @@ const Content = ({
   trailingIcon?: ReactElement;
 }) => (
   <>
-    {styleIcons(leadingIcon)}
+    {leadingIcon}
     {children}
-    {styleIcons(trailingIcon)}
+    {trailingIcon}
   </>
 );
 

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from "@storybook/react";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Ship, Loader2 } from "lucide-react";
 
 import { Button } from "./Button";
@@ -29,37 +29,6 @@ export const Variants: Story = {
 };
 
 export const Intents: Story = {
-  /*
-  render: () => (
-    <div className="flex flex-col gap-4">
-      <div className="flex gap-4">
-        <Button>Primary</Button>
-        <Button variant="outline">Primary</Button>
-        <Button variant="ghost">Primary</Button>
-      </div>
-
-      <div className="flex gap-4">
-        <Button intent="success">Success</Button>
-        <Button intent="success" variant="outline">
-          Success
-        </Button>
-        <Button intent="success" variant="ghost">
-          Success
-        </Button>
-      </div>
-
-      <div className="flex gap-4">
-        <Button intent="danger">Danger</Button>
-        <Button intent="danger" variant="outline">
-          Danger
-        </Button>
-        <Button intent="danger" variant="ghost">
-          Danger
-        </Button>
-      </div>
-    </div>
-  ),
-  */
   render: () => (
     <div className="grid w-1/3 grid-cols-3 grid-rows-3 gap-4">
       <Button>Primary</Button>
@@ -95,8 +64,8 @@ export const Sizes: Story = {
 export const Icons: Story = {
   render: () => (
     <div className="flex gap-4">
-      <Button leadingIcon={<Ship />}>Leading</Button>
-      <Button trailingIcon={<Ship />}>Trailing</Button>
+      <Button leadingIcon={<Ship className="h-4 w-4" />}>Leading</Button>
+      <Button trailingIcon={<Ship className="h-4 w-4" />}>Trailing</Button>
     </div>
   ),
 };
@@ -123,12 +92,22 @@ export const Loading: Story = {
       setLoading(true);
     }, [setLoading]);
 
+    useEffect(() => {
+      let timeout: ReturnType<typeof setTimeout>;
+
+      if (loading) {
+        timeout = setTimeout(() => setLoading(false), 2000);
+      }
+
+      return () => clearTimeout(timeout);
+    }, [loading]);
+
     return (
       <Button
         loading={loading}
         onClick={onClick}
         disabled={loading}
-        loadingIcon={<Loader2 className="animate-spin" />}
+        loadingIcon={<Loader2 className="h-4 w-4 animate-spin" />}
       >
         Load
       </Button>
