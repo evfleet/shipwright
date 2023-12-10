@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { axe } from "jest-axe";
 
-import Button from "./Button";
+import { Button } from "./Button";
 
 describe("Button", () => {
   it("should render successfully", () => {
